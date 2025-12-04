@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox spacing="20" alignment="CENTER"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controllers.MainController">
+<VBox alignment="CENTER" prefHeight="421.0" prefWidth="597.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="controllers.MainController">
 
-    <Label text="Sistema de Barbearia" style="-fx-font-size: 26px;"/>
+    <Label alignment="TOP_CENTER" contentDisplay="CENTER" style="-fx-font-size: 26px;" text="DC Barbearia">
+      <font>
+         <Font name="Arial Bold" size="88.0" />
+      </font></Label>
 
-    <Button text="Cadastrar Cliente" onAction="#goRegisterClient" />
-    <Button text="Agendar Corte" onAction="#goScheduleCut" />
-    <Button text="Listar Agendamentos" onAction="#goListAppointments" />
-    <Button text="Cancelar Agendamento" onAction="#goCancelAppointment" />
-    <Button text="Sair" onAction="#exitSystem" />
+    <Button onAction="#goRegisterClient" text="Cadastrar Cliente" />
+    <Button onAction="#goScheduleCut" text="Agendar Corte" />
+    <Button onAction="#goListAppointments" text="Listar Agendamentos" />
+    <Button onAction="#goCancelAppointment" text="Cancelar Agendamento" />
+    <Button onAction="#exitSystem" text="Sair" />
 
     <padding>
-        <Insets top="50"/>
+        <Insets top="50" />
     </padding>
 </VBox>

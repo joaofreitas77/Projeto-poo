@@ -4,3 +4,4 @@
 4;arthurito;8912348234;@gmail.com
 5;arthur;123124;@gmail.com
 6;pablo;4123423;@gmail.com
+7;henriquinho;123124234;@gmail.com
