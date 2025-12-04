@@ -1,0 +1,2 @@
+1;2;DEGRADE;true;CANCELED
+2;3;BARBA;false;PAID

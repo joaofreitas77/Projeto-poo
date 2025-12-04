@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.RegisterClientController">
+
+    <Label text="Cadastrar Cliente" style="-fx-font-size: 24px;" />
+
+    <TextField fx:id="inputName" promptText="Nome" prefWidth="250"/>
+    <TextField fx:id="inputPhone" promptText="Telefone" prefWidth="250"/>
+    <TextField fx:id="inputEmail" promptText="Email" prefWidth="250"/>
+
+    <Button text="Salvar" onAction="#saveClient" prefWidth="200"/>
+    <Button text="Voltar" onAction="#goBack" prefWidth="200"/>
+
+    <padding>
+        <Insets top="40"/>
+    </padding>
+</VBox>

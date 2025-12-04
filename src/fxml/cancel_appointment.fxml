@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.CancelAppointmentController">
+
+    <Label text="Cancelar Agendamento" style="-fx-font-size: 24px;"/>
+
+    <TextField fx:id="inputAppointmentId" promptText="ID do agendamento" prefWidth="250"/>
+
+    <Button text="Cancelar" onAction="#cancelAppointment" prefWidth="200"/>
+    <Button text="Voltar" onAction="#goBack" prefWidth="200"/>
+
+    <padding>
+        <Insets top="30"/>
+    </padding>
+</VBox>

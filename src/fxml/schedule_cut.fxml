@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.ScheduleCutController">
+
+    <Label text="Agendar Corte" style="-fx-font-size: 24px;" />
+
+    <ComboBox fx:id="comboClients" promptText="Selecione um cliente" prefWidth="250"/>
+    <ComboBox fx:id="comboHaircutType" promptText="Selecione o corte" prefWidth="250"/>
+
+    <Button text="Agendar" onAction="#schedule" prefWidth="200"/>
+    <Button text="Voltar" onAction="#goBack" prefWidth="200"/>
+
+    <padding>
+        <Insets top="40"/>
+    </padding>
+
+</VBox>

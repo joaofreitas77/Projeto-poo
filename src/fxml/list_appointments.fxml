@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.ListAppointmentsController">
+
+    <TableView fx:id="tableAppointments" prefWidth="600">
+
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colClient" text="Cliente" prefWidth="150"/>
+            <TableColumn fx:id="colCut" text="Corte" prefWidth="150"/>
+            <TableColumn fx:id="colPrice" text="Preço" prefWidth="100"/>
+            <TableColumn fx:id="colPayment" text="Pagamento" prefWidth="100"/>
+            <TableColumn fx:id="colCanceled" text="Cancelado" prefWidth="100"/>
+        </columns>
+
+    </TableView>
+
+    <Button text="Voltar" onAction="#goBack" prefWidth="200"/>
+
+    <padding>
+        <Insets top="20" left="20" right="20"/>
+    </padding>
+
+</VBox>
