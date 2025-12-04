@@ -1,5 +1,3 @@
-<title>README - Sistema de Barbearia</title>
-
 <h1>Sistema de Barbearia</h1>
 
 <p>
