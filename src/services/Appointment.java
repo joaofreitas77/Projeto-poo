@@ -12,8 +12,6 @@ public class Appointment {
         this.payment = payment;
     }
 
-    // -------- getters usados internamente --------
-
     public int getId() {
         return haircut.getId();
     }
@@ -41,8 +39,6 @@ public class Appointment {
     public Payment getPayment() {
         return payment;
     }
-
-    // -------- getters usados pelo TableView --------
 
     public String getClientName() {
         return haircut.getClient().getName();
