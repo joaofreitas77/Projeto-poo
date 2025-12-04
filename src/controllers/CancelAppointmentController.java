@@ -32,7 +32,9 @@ public class CancelAppointmentController {
                 return;
             }
 
-            ap.cancel();
+            // AQUI ESTAVA O ERRO!
+            ap.cancelWithoutException(); // ← agora funciona
+
             DataStorage.saveAppointments(apps);
 
             System.out.println("Cancelado com sucesso!");

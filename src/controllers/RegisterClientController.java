@@ -28,7 +28,7 @@ public class RegisterClientController {
             return;
         }
 
-        Client c = new Client(clients.size() + 1, name, phone, email, "");
+        Client c = new Client(clients.size() + 1, name, phone, email);
 
         clients.add(c);
         DataStorage.saveClients(clients);

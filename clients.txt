@@ -1,3 +1,6 @@
 1;dawdasd;12431234;qweasd@
 2;joao;123;@gmail
 3;henriquinho;83192849123;@henriquinho
+4;arthurito;8912348234;@gmail.com
+5;arthur;123124;@gmail.com
+6;pablo;4123423;@gmail.com

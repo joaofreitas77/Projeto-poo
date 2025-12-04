@@ -20,7 +20,11 @@ public class Haircut {
     public Client getClient() { return client; }
     public HaircutType getType() { return type; }
     public double getPrice() { return type.getPrice(); }
-    public boolean isCanceled() { return canceled; }
+
+    // CORRETO!
+    public boolean isCanceled() {
+        return this.canceled;
+    }
 
     public void cancel() throws HaircutCanceledException {
         if (canceled) throw new HaircutCanceledException("Corte já cancelado.");

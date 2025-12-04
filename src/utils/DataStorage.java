@@ -42,11 +42,10 @@ public class DataStorage {
                 String[] d = line.split(";");
 
                 clients.add(new Client(
-                        Integer.parseInt(d[0]),
-                        d[1],
-                        d[2],
-                        d[3],
-                        ""   // notes não existe mais
+                        Integer.parseInt(d[0]), // id
+                        d[1],                   // nome
+                        d[2],                   // telefone
+                        d[3]                    // email
                 ));
             }
         } catch (Exception e) {
@@ -56,7 +55,6 @@ public class DataStorage {
         return clients;
     }
 
-    // -------------------- AGENDAMENTOS --------------------
 
     public static void saveAppointments(List<Appointment> apps) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(APPOINTMENTS_FILE))) {
@@ -65,9 +63,9 @@ public class DataStorage {
                 writer.write(
                         a.getId() + ";" +
                                 a.getClient().getId() + ";" +
-                                a.getCutType().name() + ";" +
+                                a.getCutType() + ";" +
                                 a.isCanceled() + ";" +
-                                a.getPaymentStatus().name()
+                                a.getPaymentStatus()
                 );
                 writer.newLine();
             }
@@ -102,13 +100,19 @@ public class DataStorage {
                         .findFirst()
                         .orElse(null);
 
+                // Primeiro cria o corte
                 Haircut haircut = new Haircut(id, client, type);
+
+                // Se estiver marcado como cancelado no arquivo:
+                if (canceled) {
+                    haircut.cancelWithoutException();
+                }
+
+                // Depois cria o pagamento
                 Payment payment = new Payment(id, type.getPrice(), "Cartão", status);
 
+                // Agora cria o Appointment
                 Appointment ap = new Appointment(haircut, payment);
-
-                if (canceled)
-                    ap.cancelWithoutException();
 
                 list.add(ap);
             }
