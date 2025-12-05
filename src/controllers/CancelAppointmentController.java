@@ -1,6 +1,7 @@
 package controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import services.*;
 import utils.DataStorage;
@@ -32,8 +33,7 @@ public class CancelAppointmentController {
                 return;
             }
 
-            // AQUI ESTAVA O ERRO!
-            ap.cancelWithoutException(); // ← agora funciona
+            ap.cancelWithoutException();
 
             DataStorage.saveAppointments(apps);
 
@@ -43,10 +43,19 @@ public class CancelAppointmentController {
         } catch (Exception e) {
             System.out.println("Erro: " + e.getMessage());
         }
+
+        exibirMensagemCancel("Cancelado com sucesso!");
     }
 
     @FXML
     private void goBack() throws Exception {
         Main.changeScene("main.fxml");
+    }
+
+    private static void exibirMensagemCancel(String mensagem) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Cancelado!");
+        alert.setContentText(mensagem);
+        alert.showAndWait();
     }
 }

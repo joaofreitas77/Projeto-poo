@@ -1,8 +1,9 @@
-package services;
+package tests;
 
 import entities.Client;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import services.*;
 
 public class AppointmentTest {
 

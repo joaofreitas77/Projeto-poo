@@ -1,8 +1,10 @@
-package services;
+package tests;
 
 import entities.Client;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import services.Haircut;
+import services.HaircutType;
 
 public class HaircutTest {
     //cria um cliente pra usar nos testes

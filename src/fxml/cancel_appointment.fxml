@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="421.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CancelAppointmentController">
+<AnchorPane prefHeight="421.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/21.0.9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CancelAppointmentController">
    <children>
    
           <Label layoutX="174.0" layoutY="50.0" style="-fx-font-size: 24px;" text="Cancelar Agendamento" />

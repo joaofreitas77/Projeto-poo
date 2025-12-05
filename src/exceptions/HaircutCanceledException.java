@@ -1,4 +1,4 @@
-package services;
+package exceptions;
 
 public class HaircutCanceledException extends Exception {
 

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="421.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ScheduleCutController">
+<AnchorPane prefHeight="421.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/21.0.9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ScheduleCutController">
    <children>
    
           <Label layoutX="222.0" layoutY="48.0" style="-fx-font-size: 24px;" text="Agendar Corte" />

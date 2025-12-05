@@ -1,7 +1,9 @@
 package controllers;
 
 import entities.Client;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import utils.DataStorage;
 import application.Main;
@@ -23,8 +25,9 @@ public class RegisterClientController {
         String phone = inputPhone.getText();
         String email = inputEmail.getText();
 
-        if (name.isEmpty() || phone.isEmpty()) {
-            System.out.println("Nome e telefone são obrigatórios!");
+        if (name.isEmpty() || phone.isEmpty() || email.isEmpty()) {
+            System.out.println("Todos os dados são obrigatórios!");
+            exibirMensagemErro("Todos os dados são obrigatórios!");
             return;
         }
 
@@ -38,10 +41,27 @@ public class RegisterClientController {
         inputName.clear();
         inputPhone.clear();
         inputEmail.clear();
+        exibirMensagemSucesso("Cliente criado com sucesso!");
     }
 
     @FXML
     private void goBack() throws Exception {
         Main.changeScene("main.fxml");
+    }
+
+    private static void exibirMensagemErro(String mensagem) {
+        Platform.runLater(() -> {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro!");
+            alert.setContentText(mensagem);
+            alert.showAndWait();
+        });
+    }
+
+    private static void exibirMensagemSucesso(String mensagem) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Sucesso");
+        alert.setContentText(mensagem);
+        alert.showAndWait();
     }
 }

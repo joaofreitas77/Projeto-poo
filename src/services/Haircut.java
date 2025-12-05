@@ -1,6 +1,7 @@
 package services;
 
 import entities.Client;
+import exceptions.HaircutCanceledException;
 
 public class Haircut {
 

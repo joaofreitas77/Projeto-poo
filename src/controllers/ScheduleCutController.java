@@ -2,6 +2,7 @@ package controllers;
 
 import entities.Client;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import services.*;
 import utils.DataStorage;
@@ -46,10 +47,19 @@ public class ScheduleCutController {
 
         comboClients.setValue(null);
         comboHaircutType.setValue(null);
+
+        exibirMensagemSucesso("Agendamento realizado!");
     }
 
     @FXML
     private void goBack() throws Exception {
         Main.changeScene("main.fxml");
+    }
+
+    private static void exibirMensagemSucesso(String mensagem) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Sucesso");
+        alert.setContentText(mensagem);
+        alert.showAndWait();
     }
 }

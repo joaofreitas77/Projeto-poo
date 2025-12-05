@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="421.0" prefWidth="748.0" spacing="10" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListAppointmentsController">
+<VBox prefHeight="421.0" prefWidth="748.0" spacing="10" xmlns="http://javafx.com/javafx/21.0.9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListAppointmentsController">
 
     <TableView fx:id="tableAppointments" prefWidth="600">
 
