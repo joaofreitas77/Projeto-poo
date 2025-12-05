@@ -30,5 +30,3 @@ public class Main extends Application {
         launch(args);
     }
 }
-
-//--module-path "C:\Users\DELL\Downloads\openjfx-21.0.9_windows-x64_bin-sdk\javafx-sdk-21.0.9\lib" --add-modules javafx.controls,javafx.fxml

@@ -12,8 +12,6 @@ public class DataStorage {
     private static final String CLIENTS_FILE = "clients.txt";
     private static final String APPOINTMENTS_FILE = "appointments.txt";
 
-    // -------------------- CLIENTES --------------------
-
     public static void saveClients(List<Client> clients) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(CLIENTS_FILE))) {
             for (Client c : clients) {
@@ -42,10 +40,10 @@ public class DataStorage {
                 String[] d = line.split(";");
 
                 clients.add(new Client(
-                        Integer.parseInt(d[0]), // id
-                        d[1],                   // nome
-                        d[2],                   // telefone
-                        d[3]                    // email
+                        Integer.parseInt(d[0]),
+                        d[1],
+                        d[2],
+                        d[3]
                 ));
             }
         } catch (Exception e) {
@@ -100,18 +98,18 @@ public class DataStorage {
                         .findFirst()
                         .orElse(null);
 
-                // Primeiro cria o corte
+                //cria o corte
                 Haircut haircut = new Haircut(id, client, type);
 
-                // Se estiver marcado como cancelado no arquivo:
+                //se tiver marcado como cancelado no arquivo
                 if (canceled) {
                     haircut.cancelWithoutException();
                 }
 
-                // Depois cria o pagamento
+                //depois cria o pagamento
                 Payment payment = new Payment(id, type.getPrice(), "Cartão", status);
 
-                // Agora cria o Appointment
+                //cria o agendamento
                 Appointment ap = new Appointment(haircut, payment);
 
                 list.add(ap);

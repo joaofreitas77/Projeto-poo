@@ -22,7 +22,6 @@ public class Haircut {
     public HaircutType getType() { return type; }
     public double getPrice() { return type.getPrice(); }
 
-    // CORRETO!
     public boolean isCanceled() {
         return this.canceled;
     }
